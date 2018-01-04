@@ -50,5 +50,13 @@ $("#schedule").dataTableEditor({ postURL: "/Enrichment/Timetable" });
 
 Functions will receive the relevant td element as the first parameter, then whatever content jQuery returns for the ajax callbacks.
 
+## Server-side
+You'll need to implement something to receive the requests and do something with the data. Your application will receive:
+- `id`
+- `field`
+- `value`
+
+By default the plugin will replace the content with whatever is returned by the server, so output the same `value` that was passed or do something more interesting.
+
 # Demo
 ![gif](https://i.imgur.com/jxYtMjn.gif)
